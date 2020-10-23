@@ -20,3 +20,18 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update  #新增数据库连接必备参数
+#文件名必须是application.yml
+#  YAML加载属性到内存中保存的时候是有序的
+#定义不同环境设置
+  #server:
+  #    port: 8881
+  #---
+  #spring:
+  #    profiles: test
+  #server:
+  #    port: 8882
+  #---
+  #spring:
+  #    profiles: prod
+  #server:
+  #    port: 8883

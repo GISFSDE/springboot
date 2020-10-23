@@ -1,5 +1,6 @@
-package cn.wmyskxz.springboot;
+package cn.wmyskxz.springboot.controller;
 
+import cn.wmyskxz.springboot.entity.StudentProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController//@Controller 和 @ResponseBody 注解的合体版
 public class HelloController {
-    @Value("${name}")
+    @Value("${name}")//SpringBoot 可以通过@PropertySource，@Value，@Environment，@ConfigurationProperties 绑定变量
     private String name;//我们并没有在 yml 文件中注明属性的类型，而是在使用的时候定义的。
 
     @Value("${age}")
