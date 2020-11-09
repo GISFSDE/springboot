@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ThymeleafController {
     @GetMapping("/thymeleaf")
     public String index(ModelMap map) {
-        return "thymeleaf";
+        return "thy/thymeleaf";
     }
 }

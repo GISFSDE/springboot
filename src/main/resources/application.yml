@@ -6,14 +6,16 @@ content: "name:${name},age:${age}"
 student:
   name: 真的帅
   age: 21
-
+#添加thymeleaf依赖后jsp会报错找不到，要两者同时使用方法如下，templates下新添thy文件夹，返回路径前加thy/
 spring:
+  thymeleaf:
+    view-names: thy/*
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/ssm?characterEncoding=Utf-8
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=Utf-8
     username: root
     password: 724111
     driver-class-name: com.mysql.jdbc.Driver

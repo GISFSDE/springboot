@@ -24,3 +24,5 @@ public class SpringbootApplication {
 //直接执⾏ main ⽅法运⾏。
 
 //SpringBoot ⽀持 Java Util Logging，Log4j2，Logback 作为⽇志框架，如果你使⽤ Starters 启动器，SpringBoot 将使⽤ Logback 作为默认框架。
+
+//⽤ Maven/Gradle 插件运⾏。可运行thtmeleaf与jsp同时存在的jsp，

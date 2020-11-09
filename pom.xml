@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-<!--四部分
-项目元数据
-parent
-dependencies
-build-->
+    <!--四部分
+    项目元数据
+    parent
+    dependencies
+    build-->
 
-<!--    这个标签是在配置 Spring Boot 的父级依赖：
-        有了这个，当前的项目才是 Spring Boot 项目，spring-boot-starter-parent 是一个特殊的 starter ，
-        它用来提供相关的 Maven 默认依赖，使用它之后，常用的包依赖就可以省去 version 标签。
-        或导⼊ spring-boot-dependencies 项⽬依赖。控制版本与打包等内容-->
+    <!--    这个标签是在配置 Spring Boot 的父级依赖：
+            有了这个，当前的项目才是 Spring Boot 项目，spring-boot-starter-parent 是一个特殊的 starter ，
+            它用来提供相关的 Maven 默认依赖，使用它之后，常用的包依赖就可以省去 version 标签。
+            或导⼊ spring-boot-dependencies 项⽬依赖。控制版本与打包等内容-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -19,7 +19,7 @@ build-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-<!--项目元数据Maven项目的基本元素-->
+    <!--项目元数据Maven项目的基本元素-->
     <groupId>cn.wmyskxz</groupId>
     <artifactId>springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -29,23 +29,20 @@ build-->
     <properties>
         <java.version>1.8</java.version>
     </properties>
-<!--项目具体依赖-->
+    <!--项目具体依赖-->
     <dependencies>
-<!--Thymeleaf依赖-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-web</artifactId>-->
-<!--        </dependency>-->
+
+        <!--Thymeleaf依赖-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-web</artifactId>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!--MySQL连接的依赖包-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+
         <!--嵌入式数据库-->
         <dependency>
             <groupId>org.hsqldb</groupId>
@@ -74,7 +71,7 @@ build-->
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.4.0</version>
         </dependency>
-<!--        增加Mybatis支持-->
+        <!--        增加Mybatis支持-->
         <!-- mybatis -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -88,7 +85,7 @@ build-->
             <version>5.1.21</version>
         </dependency>
 
-<!--        使用jsp添加依赖-->
+        <!--        使用jsp添加依赖-->
         <!-- servlet依赖. -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -108,10 +105,9 @@ build-->
         </dependency>
 
 
-
-<!--        热部署两种方式，修改代码自动动重启，新添依赖需手动
-Spring Loaded
-Spring-boot-devtools-->
+        <!--        热部署两种方式，修改代码自动动重启，新添依赖需手动
+        Spring Loaded
+        Spring-boot-devtools-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -119,14 +115,13 @@ Spring-boot-devtools-->
         </dependency>
 
 
-
-<!--        常用starter
-spring-boot-starter-parent //boot 项目继承的父项目模块.
-spring-boot-starter-web //boot 项目集成 web 开发模块.
-spring-boot-starter-tomcat //boot 项目集成 tomcat 内嵌服务器.
-spring-boot-starter-test //boot 项目集成测试模块.
-mybatis-spring-boot-starter //boot 项目集成 mybatis 框架.
-spring-boot-starter-jdbc //boot 项目底层集成 jdbc 实现数据库操作支持.-->
+        <!--        常用starter
+        spring-boot-starter-parent //boot 项目继承的父项目模块.
+        spring-boot-starter-web //boot 项目集成 web 开发模块.
+        spring-boot-starter-tomcat //boot 项目集成 tomcat 内嵌服务器.
+        spring-boot-starter-test //boot 项目集成测试模块.
+        mybatis-spring-boot-starter //boot 项目集成 mybatis 框架.
+        spring-boot-starter-jdbc //boot 项目底层集成 jdbc 实现数据库操作支持.-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -143,25 +138,38 @@ spring-boot-starter-jdbc //boot 项目底层集成 jdbc 实现数据库操作支
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-<!--构建配置部分-->
+    <!--构建配置部分-->
     <build>
         <plugins>
+            <!--热部署配置-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--fork :  如果没有该项配置，肯定devtools不会起作用，即应用不会restart -->
+                    <!--.File   Settings  Build,Execution,Deployment  Compiler    Build project automatically 勾选然后保存-->
+                    <fork>true</fork>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+    <!--   项目的打包类型：pom、jar、war
 
+    packing默认是jar类型，
+
+    <packaging>pom</packaging>    父类型都为pom类型
+
+        <packaging>jar</packaging>     内部调用或者是作服务使用
+
+        <packaging>war</packaging>    需要部署的项目
+
+        -->
+    <packaging>war</packaging>
 </project>

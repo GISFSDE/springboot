@@ -3,8 +3,13 @@ package cn.wmyskxz.springboot.controller;
 import cn.wmyskxz.springboot.entity.StudentProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 /**
  * 测试控制器
