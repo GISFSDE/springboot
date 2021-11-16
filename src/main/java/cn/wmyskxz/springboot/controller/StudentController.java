@@ -9,12 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-/**
- * Student 控制器
- *
- * @author: @我没有三颗心脏
- * @create: 2018-05-08-下午 20:25
- */
+
 @Controller
 public class StudentController {
 
