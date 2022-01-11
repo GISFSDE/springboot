@@ -1,4 +1,4 @@
-package cn.wmyskxz.springboot.pojo;
+package cn.lxl.springboot.pojo;
 
 import java.util.Date;
 

@@ -1,7 +1,7 @@
-package cn.wmyskxz.springboot.controller;
+package cn.lxl.springboot.controller;
 
-import cn.wmyskxz.springboot.mapper.StudentMapper;
-import cn.wmyskxz.springboot.pojo.Student;
+import cn.lxl.springboot.pojo.Student;
+import cn.lxl.springboot.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,9 +1,9 @@
-package cn.wmyskxz.springboot;
+package cn.lxl.springboot;
 
-import cn.wmyskxz.springboot.controller.HelloController;
-import cn.wmyskxz.springboot.controller.UserController;
-import cn.wmyskxz.springboot.entity.UserJT;
-import cn.wmyskxz.springboot.service.UserJTService;
+import cn.lxl.springboot.controller.HelloController;
+import cn.lxl.springboot.controller.UserController;
+import cn.lxl.springboot.entity.UserJT;
+import cn.lxl.springboot.service.UserJTService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package cn.wmyskxz.springboot.controller;
+package cn.lxl.springboot.controller;
 
 import javafx.scene.input.DataFormat;
 import org.springframework.stereotype.Controller;

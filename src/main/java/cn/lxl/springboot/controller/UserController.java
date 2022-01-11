@@ -1,6 +1,6 @@
-package cn.wmyskxz.springboot.controller;
+package cn.lxl.springboot.controller;
 
-import cn.wmyskxz.springboot.entity.User;
+import cn.lxl.springboot.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
