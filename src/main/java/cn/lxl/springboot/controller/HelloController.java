@@ -32,4 +32,6 @@ public class HelloController {
     public String hello() {
         return "Hello Spring Boot!"+name+age+content+studentProperties.getName()+studentProperties.getAge();
     }
+
+
 }

@@ -54,9 +54,6 @@ public class User {
                 '}';
     }
 
-    public User() {
-    }
-
     public User(Long id, String name, Integer age) {
         this.id = id;
         this.name = name;
