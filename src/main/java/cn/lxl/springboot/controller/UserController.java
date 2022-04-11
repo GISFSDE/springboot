@@ -37,7 +37,7 @@ public class UserController {
 
     /**
      * 处理"/users/"的POST请求，用来创建User
-     *
+     *关于@Valid注解  ：https://blog.csdn.net/sunnyzyq/article/details/103527380
      * @param user
      * @return
      */
