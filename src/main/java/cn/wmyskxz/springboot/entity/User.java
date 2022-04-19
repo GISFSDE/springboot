@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 @ApiModel(description = "用户实体")
 public class User {
 
+
     @ApiModelProperty("用户编号")
     private Long id;
 
@@ -20,7 +21,11 @@ public class User {
     @NotNull
     @ApiModelProperty("用户年龄")
     private Integer age;
-
+    public User(Long id, @NotNull String name, @NotNull Integer age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
     public Long getId() {
         return id;
     }
