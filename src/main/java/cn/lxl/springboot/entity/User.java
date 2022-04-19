@@ -21,11 +21,7 @@ public class User {
     @NotNull
     @ApiModelProperty("用户年龄")
     private Integer age;
-    public User(Long id, @NotNull String name, @NotNull Integer age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
+
     public Long getId() {
         return id;
     }
