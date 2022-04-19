@@ -1,6 +1,6 @@
-package cn.wmyskxz.springboot.service;
+package cn.lxl.springboot.service;
 
-import cn.wmyskxz.springboot.entity.UserJT;
+import cn.lxl.springboot.entity.UserJT;
 
 import java.util.List;
 

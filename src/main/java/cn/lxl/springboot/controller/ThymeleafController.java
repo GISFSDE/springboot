@@ -1,4 +1,4 @@
-package cn.wmyskxz.springboot.controller;
+package cn.lxl.springboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -1,15 +1,11 @@
-package cn.wmyskxz.springboot.controller;
+package cn.lxl.springboot.controller;
 
-import cn.wmyskxz.springboot.entity.StudentProperties;
+import cn.lxl.springboot.entity.StudentProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.text.DateFormat;
-import java.util.Date;
 /**
  * @author lxl
  */
@@ -36,4 +32,6 @@ public class HelloController {
     public String hello() {
         return "Hello Spring Boot!"+name+age+content+studentProperties.getName()+studentProperties.getAge();
     }
+
+
 }

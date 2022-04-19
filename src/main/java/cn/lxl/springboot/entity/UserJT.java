@@ -1,4 +1,4 @@
-package cn.wmyskxz.springboot.entity;
+package cn.lxl.springboot.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
-package cn.wmyskxz.springboot.controller;
+package cn.lxl.springboot.controller;
 
-import cn.wmyskxz.springboot.entity.User;
+import cn.lxl.springboot.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -37,7 +37,7 @@ public class UserController {
 
     /**
      * 处理"/users/"的POST请求，用来创建User
-     *
+     *关于@Valid注解  ：https://blog.csdn.net/sunnyzyq/article/details/103527380
      * @param user
      * @return
      */

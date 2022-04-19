@@ -1,6 +1,6 @@
-package cn.wmyskxz.springboot.mapper;
+package cn.lxl.springboot.mapper;
 
-import cn.wmyskxz.springboot.pojo.Student;
+import cn.lxl.springboot.pojo.Student;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
