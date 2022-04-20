@@ -28,19 +28,19 @@ public class SpringbootApplication {
 //        SpringApplication.run(SpringbootApplication.class, args); 返回IOC容器
         ConfigurableApplicationContext run = SpringApplication.run(SpringbootApplication.class, args);
 //        查看所有组件
-        String[] beanDefinitionNames = run.getBeanDefinitionNames();
-        for (String name : beanDefinitionNames
-        ) {
-            System.out.println(name);
-        }
+//        String[] beanDefinitionNames = run.getBeanDefinitionNames();
+//        for (String name : beanDefinitionNames
+//        ) {
+//            System.out.println(name);
+//        }
 
         //配置类本身也是组件,以类型获取组件
         MyConfig bean = run.getBean(MyConfig.class);
         System.out.println(bean);
 
-
-        User user = run.getBean(User.class);
-        System.out.println(user);
+//        有多个相同组件会报错NoUniqueBeanDefinitionException
+//        User user = run.getBean(User.class);
+//        System.out.println(user);
 
 //      以名称判断是否有组件
         boolean user01 = run.containsBean("user01");

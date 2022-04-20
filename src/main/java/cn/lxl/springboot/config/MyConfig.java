@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
-/*测试均在主程序类*/
-
 
 /**
  * 配置类
@@ -18,7 +16,7 @@ import org.springframework.context.annotation.*;
  * proxyBeanMethods = true 表示创建单例对象,有线程安全问题  为Full组件依赖
  * proxyBeanMethods = false 表示创建多例对象，为Lite组件依赖,每次创建对象不会检查容器中是否有此对象从而直接创建新对象。别人不会依赖设置为false启动会更快。
  */
-
+/*测试均在主程序类*/
 //将配置文件中的bean注入容器
 @ImportResource("classpath:beans.xml")
 //告诉springboot这是个配置类
@@ -56,3 +54,5 @@ public class MyConfig {
         return new StudentProperties();
     }
 }
+
+
