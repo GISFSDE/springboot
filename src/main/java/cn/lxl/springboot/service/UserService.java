@@ -1,9 +1,9 @@
-package cn.lxl.springbootvue.service;
+package cn.lxl.springboot.service;
 
 
 
-import cn.lxl.springbootvue.entity.User;
-import cn.lxl.springbootvue.mapper.UserMapper;
+import cn.lxl.springboot.entity.User;
+import cn.lxl.springboot.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

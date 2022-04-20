@@ -1,5 +1,5 @@
 server:
-  port: 8111
+  port: 8765
 name: 我帅得一匹
 age: 22
 content: "name:${name},age:${age}"

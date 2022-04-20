@@ -1,6 +1,7 @@
-package cn.lxl.springboot.service;
+package cn.lxl.springboot.service.impl;
 
 import cn.lxl.springboot.entity.UserJT;
+import cn.lxl.springboot.service.UserJTService;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package cn.lxl.springbootvue.mapper;
+package cn.lxl.springboot.mapper;
 
 
-import cn.lxl.springbootvue.entity.User;
+import cn.lxl.springboot.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

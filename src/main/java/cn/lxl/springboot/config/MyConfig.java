@@ -29,18 +29,21 @@ import org.springframework.context.annotation.*;
 // 表示通过aop框架暴露该代理对象,AopContext能够访问
 @EnableAspectJAutoProxy(exposeProxy = true)
 //给容器中自动创建出对应类型的组件、默认组件名为其全类名、使用其无参构造函数
-//@Import({User.class})
-
+@Import({User.class})
 //当不能在原类中添加@component注解时（比如用他人包时），则在使用的地方添加此注解,作用是开启student配置绑定功能且将其注入到容器中
 //@EnableConfigurationProperties(StudentProperties.class)
 public class MyConfig {
-    //给容器添加组件，一方法名作为组件的id。返回类型就是组件类型。返回的值就是组建在容器中的实例
-    @Bean
-    public User user01() {
-        return new User(111111111L, "1", 1);
-    }
-//条件装配，有name为user01 的bean才注入注解下的student的bean，反之有 @ConditionalOnMissingBean
 
+    @Bean
+    /**给容器添加组件，一方法名作为组件的id。返回类型就是组件类型。返回的值就是组建在容器中的实例*/
+    public User user01() {
+        return new User(111L, "1", "www","sqq",111111111L,"wd",1);
+    }
+
+
+    /**
+     * 条件装配，有name为user01 的bean才注入注解下的student的bean，反之有 @ConditionalOnMissingBean
+     */
     @ConditionalOnBean(name = "user02")
     @Bean
     public StudentProperties student() {
