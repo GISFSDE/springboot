@@ -20,6 +20,7 @@ public class HelloController {
     @Value("${age}")
     private Integer age;
 
+
     // 这样写配置文件繁琐而且可能会造成类的臃肿，因为有许许多多的 @Value 注解,我们可以把配置信息封装成一个类
 
     @Value("${content}")

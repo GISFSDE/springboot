@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
     <meta charset="UTF-8" />
     <title>Spring Boot中使用ECharts</title>
     <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts.min.js"></script>
 </head>
 <body>
+<h1 th:text="${msg}">哈哈</h1>
 <div id="main" style="width: 1000px;height:400px;"></div>
 </body>
 

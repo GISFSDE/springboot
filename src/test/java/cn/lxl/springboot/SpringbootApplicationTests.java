@@ -6,6 +6,7 @@ import cn.lxl.springboot.entity.UserJT;
 import cn.lxl.springboot.service.UserJTService;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 
@@ -57,6 +58,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 //@Ignore("not ready yet")：该方法不执行
 //执行顺序是：@BeforeClass→@Before→@Test→@After→@AfterClass
 //当启动测试类，测试类中有多个@Test，@BeforeClass和@AfterClass只会执行一次，每一个@Test都会执行一次@Before和@After。
+
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class SpringbootApplicationTests {
@@ -101,6 +104,7 @@ class SpringbootApplicationTests {
 
 
     @Test
+    @DisplayName("获取hello测试方法")
     public void getHello() throws Exception {
         mvc.perform(get("/hello").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
